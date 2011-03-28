@@ -1,0 +1,19 @@
+main = Server(
+    uuid="<%= @node[:mongrel2][:uuid] %>",
+    access_log="/logs/access.log",
+    error_log="/logs/error.log",
+    chroot="<%= @node[:mongrel2][:chroot] %>",
+    default_host="<%= @node[:mongrel2][:hostname] %>",
+    name="<%= @node[:mongrel2][:name] %>",
+    pid_file="/run/mongrel2.pid",
+    port=<%= @node[:mongrel2][:port] %>,
+    hosts = [
+        Host(name="localhost", routes={
+            '/': Dir(base='www/', index_file='index.html',
+                     default_ctype='text/html')
+        })
+    ]
+)
+
+servers = [main]
+

@@ -1,0 +1,4 @@
+#!/bin/sh
+PATH=<%= node[:mongrel2][:chroot] %>/bin
+exec 2>&1
+LD_LIBRARY_PATH=<%= node[:zeromq][:install_dir] %>/lib/ exec mongrel2 <%= node[:mongrel2][:chroot] %>/etc/mongrel2.sqlite <%= node[:mongrel2][:uuid] %>
