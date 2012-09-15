@@ -20,7 +20,10 @@
 #
 
 include_recipe "build-essential"
-include_recipe "zeromq"
+
+# include_recipe "zeromq"
+package "libzmq-dev"
+
 include_recipe "daemontools"
 
 user "m2" do
