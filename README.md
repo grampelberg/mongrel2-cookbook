@@ -4,7 +4,7 @@ REQUIREMENTS
 Platform
 --------
 
-Currently tested on Ubuntu 10.10. If you get it working on another platform (or
+Currently tested on Ubuntu 12.04. If you get it working on another platform (or
 it doesn't work on your platform of choice), open an issue.
 
 Quickstart
