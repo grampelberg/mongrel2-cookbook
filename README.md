@@ -16,12 +16,14 @@ Define at least the following attributes:
 * `node[:zeromq][:src_version]` - string, "2.1.7" recommended
 
 
-Cookbooks
+Dependencies
 ---------
 
 - build-essential
 - zeromq
 - daemontools
+    - ucspi-tcp
+        - If this cookbook fails to work, you should try [this fork](https://github.com/hfinucane/ucspi-tcp)
 
 ATTRIBUTES
 ==========
