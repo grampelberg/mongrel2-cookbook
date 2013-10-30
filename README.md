@@ -7,6 +7,15 @@ Platform
 Currently tested on Ubuntu 10.10. If you get it working on another platform (or
 it doesn't work on your platform of choice), open an issue.
 
+Quickstart
+----------
+
+Define at least the following attributes:
+
+* `node[:daemontools][:install_method]` - "package" or "source". The former is recommended.
+* `node[:zeromq][:src_version]` - string, "2.1.7" recommended
+
+
 Cookbooks
 ---------
 
