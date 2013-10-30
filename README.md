@@ -4,15 +4,26 @@ REQUIREMENTS
 Platform
 --------
 
-Currently tested on Ubuntu 10.10. If you get it working on another platform (or
+Currently tested on Ubuntu 12.04. If you get it working on another platform (or
 it doesn't work on your platform of choice), open an issue.
 
-Cookbooks
+Quickstart
+----------
+
+Define at least the following attributes:
+
+* `node[:daemontools][:install_method]` - "package" or "source". The former is recommended.
+* `node[:zeromq][:src_version]` - string, "2.1.7" recommended
+
+
+Dependencies
 ---------
 
 - build-essential
 - zeromq
 - daemontools
+    - ucspi-tcp
+        - If this cookbook fails to work, you should try [this fork](https://github.com/hfinucane/ucspi-tcp)
 
 ATTRIBUTES
 ==========

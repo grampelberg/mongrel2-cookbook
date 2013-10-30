@@ -1,7 +1,7 @@
 #
 # Author:: Thomas Rampelberg <thomas@saunter.org>
-# Cookbook Name:: zeromq
-# Attributes:: zeromq
+# Cookbook Name:: mongrel2
+# Attributes:: mongrel2
 #
 # Copyright 2010, Thomas Rampelberg
 #
@@ -17,9 +17,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-default[:mongrel2][:src_version] = "1.5"
-default[:mongrel2][:src_mirror] = "http://mongrel2.org/static/downloads/mongrel2-#{mongrel2[:src_version]}.tar.bz2"
-default[:mongrel2][:checksum] = "b699ffc7ef922ad7d703fcd39a897910"
+default[:mongrel2][:src_version] = "1.7.5"
+default[:mongrel2][:src_mirror] = "https://github.com/zedshaw/mongrel2/archive/v#{mongrel2[:src_version]}.tar.gz"
+default[:mongrel2][:checksum] = "923c6403d037dc7d0a016df1b3d14be6"
 default[:mongrel2][:chroot] = "/opt/mongrel2-#{mongrel2[:src_version]}"
 default[:mongrel2][:uuid] = "f400bf85-4538-4f7a-8908-67e313d515c2"
 default[:mongrel2][:name] = "master"
