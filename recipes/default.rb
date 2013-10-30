@@ -67,7 +67,7 @@ end
 bash "install mongrel2 #{node[:mongrel2][:src_version]}" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
-    tar -jxf #{m2_tar_gz}
+    tar -zxf #{m2_tar_gz}
     cd mongrel2-#{node[:mongrel2][:src_version]} && LD_LIBRARY_PATH=/opt/zeromq-#{node[:zeromq][:src_version]}/lib:$LD_LIBRARY_PATH make clean all && PREFIX=#{basedir} make install
   EOH
   not_if { ::FileTest.exists?("#{basedir}/bin") }
